@@ -27,6 +27,9 @@ dataset.dtypes
 # fshierja kolonave te pa nevojshme
 dataset = dataset.drop(['is_retweet'], axis=1)
 
+#transformimi i te dhenave
+dataset["user_verified"] = dataset["user_verified"].astype(int)
+
 # strategjia e pastrimit te dhenave
 # zevendesimi i vlerave per pastrimin e te dhenave
 dataset["user_location"].fillna("No location", inplace=True)
